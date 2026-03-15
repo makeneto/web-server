@@ -11,8 +11,7 @@ body {
     color: #333;
     max-width: 650px;
     margin: 0 auto;
-    padding: 2rem 16px;
-
+    padding: 4rem 16px 2rem;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -29,17 +28,79 @@ header {
 
 h1 {
     font-size: 64px;
-    margin-bottom: 16px;
+    line-height: 1rem;
+    margin-bottom: 3rem;
+}
+
+@media (width <=650px) {
+    header h1 {
+        font-size: 32px;
+    }
 }
 
 header a {
     color: #888;
     margin-right: 16px;
     text-decoration: none;
+    transition: color .2s ease-in;
+}
+
+header a:hover {
+    color: #383838;
+}
+
+.weather__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather__header>img {
+    height: 3.8rem;
+}
+
+form {
+    margin-top: 2rem;
+    display: flex;
+    gap: .6rem;
 }
 
 .portrait {
     width: 250px;
+}
+
+input#address {
+    border: 1px solid #e1e1e1;
+    padding: .8rem 1.3rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+}
+
+input#address:focus {
+    border: 1px solid black;
+    outline: 2px solid #e1e1e1;
+}
+
+button[type="submit"] {
+    background-color: #bdedff;
+    border: none;
+    padding: .8rem 1.3rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+button[type="submit"]:hover {
+    background-color: #a4ccda;
+}
+
+#information {
+    display: none;
+    gap: .7rem;
+    margin-top: 2rem;
+    background: #bdedff;
+    padding: 2rem;
 }
 
 footer {
@@ -47,4 +108,10 @@ footer {
     border-top: 1px solid #eee;
     margin-top: 16px;
     padding: 16px 0;
+}
+
+@media (width <=650px) {
+    footer {
+        text-align: center;
+    }
 }

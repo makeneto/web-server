@@ -9,8 +9,21 @@
 
   <body>
     <div class="main-content">
-      {{>header}}
+      <div class="weather__header">
+        {{>header}}
+        <img src="/img/cloud.png" alt="Cloud Image">
+      </div>
       <p>Use this site to get weather!</p>
+
+      <form>
+        <input type="text" placeholder="Set location" name="iAddress" id="address" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+
+      <div id="information">
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+      </div>
     </div>
     {{>footer}}
 
